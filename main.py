@@ -5,6 +5,7 @@ from wechatpy.client.api import WeChatMessage, WeChatTemplate
 import requests
 import os
 import random
+import datetime as dt
 
 today = datetime.now()
 
@@ -19,8 +20,9 @@ user_id = os.environ["USER_ID"]
 template_id = os.environ["TEMPLATE_ID"]
 
 def get_date():
-    print(today.strftime("%m-%d"))
-    return today.strftime("%m-%d")
+    # print(today.strftime("%m-%d"))
+    # return today.strftime("%m-%d")
+    return (dt.datetime.now() + dt.timedelta(days=1)).strftime("%m-%d")
 # get_date()
 
 
